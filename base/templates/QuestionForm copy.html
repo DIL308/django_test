@@ -1,0 +1,20 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+   	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulario de registro</title>
+    <link rel="icon" type="image/png" href="{% static 'imagenes/favicon.png' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/estilos.css' %}">
+</head>
+ 
+  <form action="{% url 'createQuestion' %}" method="POST">{% csrf_token %}
+
+    {{formulario.as_p}}
+
+    <button type="submit"> Enviar </button>
+
+  </form>
+
